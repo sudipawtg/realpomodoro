@@ -102,11 +102,6 @@ Publishing uses the reusable workflow from [`sudipawtg/real-cws-workflows`](http
 | `CWS_PUBLISHER_ID` | Shared Chrome Web Store publisher ID |
 | `CWS_EXTENSION_ID` | This extension’s store item ID |
 
-### Secrets
-
-| Secret | Purpose |
-| --- | --- |
-| `GCP_WIF_PROVIDER` | Workload Identity Federation provider |
-| `CWS_SERVICE_ACCOUNT` | GCP service account email for CWS API |
+No Google Cloud secrets required. The Action attaches a ZIP to the GitHub Release; upload that ZIP in the Chrome Web Store dashboard.
 
 See [store/PUBLISH_CHECKLIST.md](./store/PUBLISH_CHECKLIST.md) and [store/PRIVACY_POLICY.md](./store/PRIVACY_POLICY.md).
