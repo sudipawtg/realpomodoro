@@ -7,7 +7,7 @@ Aligned with the [Chrome Web Store Program Policies](https://developer.chrome.co
 
 | Field | Value |
 | --- | --- |
-| Name | realpomodoro |
+| Name | Real Pomodoro |
 | Version | 1.0.0 (from `manifest.json`) |
 | Language | English |
 | Category | Productivity |
@@ -17,9 +17,9 @@ Aligned with the [Chrome Web Store Program Policies](https://developer.chrome.co
 
 ## Short description (manifest / summary, max 132 characters)
 
-A focused 25-minute Pomodoro timer with break reminders. Runs locally with no accounts, ads, or network requests.
+A focused 25-minute Pomodoro timer with 5-minute breaks. Local alarms and notifications only.
 
-Character count: 108
+Character count: 93
 
 ## Detailed description
 

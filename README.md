@@ -1,6 +1,6 @@
-# realpomodoro
+# Real Pomodoro
 
-A minimal Chrome Manifest V3 Pomodoro timer. Plain HTML, CSS, and JavaScript — no build step, no network requests, no accounts.
+A focused 25-minute Pomodoro timer with 5-minute breaks. Local alarms and notifications only.
 
 **Homepage:** https://github.com/sudipawtg/realpomodoro
 
