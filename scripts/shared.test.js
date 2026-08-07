@@ -92,7 +92,7 @@ assert.strictEqual(breakComplete.daily.completedFocusSessions, 1);
 assert.strictEqual(context.getPrimaryActionLabel(defaultTimer), "Start");
 assert.strictEqual(
   context.getPrimaryActionLabel(context.createDefaultTimer(MODE_BREAK, productionDurations)),
-  "Start break",
+  "Start",
 );
 assert.strictEqual(
   context.getPrimaryActionLabel(Object.assign({}, defaultTimer, { status: STATUS_RUNNING })),

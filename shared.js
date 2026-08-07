@@ -367,9 +367,6 @@ function getPrimaryActionLabel(timer) {
   if (timer.status === TIMER_STATUS_PAUSED) {
     return "Continue";
   }
-  if (timer.mode === TIMER_MODE_BREAK) {
-    return "Start break";
-  }
   return "Start";
 }
 

@@ -58,7 +58,7 @@ function renderState(state) {
   timerDisplayElement.textContent = formatMs(remainingMs);
   updateProgressRing(progress);
   primaryActionButton.textContent = getPrimaryActionLabel(timer);
-  dailyCountElement.textContent = String(state.daily.completedFocusSessions);
+  dailyCountElement.textContent = `${state.daily.completedFocusSessions} today`;
   updateModeButtons(timer.mode, isIdle);
 
   const isRunning = timer.status === TIMER_STATUS_RUNNING;

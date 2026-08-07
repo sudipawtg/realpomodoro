@@ -186,21 +186,12 @@ body.mode-break {
 
 .mode-switch {
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .mode-switch.is-disabled {
   opacity: 0.45;
   pointer-events: none;
-}
-
-.mode-switch-label {
-  margin: 0 0 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
 }
 
 .mode-switch-buttons {
@@ -240,21 +231,15 @@ body.mode-break {
 
 .daily-count {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
-  gap: 6px;
   width: 100%;
   padding-top: 4px;
-  font-size: 0.88rem;
-  color: var(--text-muted);
 }
 
 .daily-count-value {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.daily-count-suffix {
+  font-size: 0.82rem;
+  font-weight: 500;
   color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }

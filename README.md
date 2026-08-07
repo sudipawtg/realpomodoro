@@ -4,6 +4,10 @@ A focused 25-minute Pomodoro timer with 5-minute breaks. Local alarms and notifi
 
 **Homepage:** https://github.com/sudipawtg/realpomodoro
 
+## Design
+
+**Less text, more visual guidance.** See [DESIGN.md](./DESIGN.md).
+
 ## Features
 
 - 25-minute focus sessions and 5-minute breaks
