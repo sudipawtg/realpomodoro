@@ -32,6 +32,17 @@ Policy reference: https://developer.chrome.com/docs/webstore/program-policies/po
 
 Set `"version": "1.0.0-dev"` in `manifest.json` or `DEV_SHORT = true` in `shared.js`, reload extension, and repeat completion/notification tests (3 s focus / 1 s break).
 
+## Design QA (required)
+
+Confirm UI matches [DESIGN.md](../DESIGN.md):
+
+1. Each screen has one main idea and one primary action
+2. Titles are 1–4 words; no unnecessary paragraphs in the UI
+3. Buttons use specific 1–3 word labels (not OK / Submit / Proceed)
+4. Empty states use a visual + short title + one action
+5. Status feedback is brief (Saved, Try again, Done)
+6. Important meaning is not colour-only; screen-reader labels remain
+
 ## Upload package
 
 ZIP the extension root so `manifest.json` is at the top level (not nested in another folder).

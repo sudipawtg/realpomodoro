@@ -9,6 +9,7 @@ Mapped against the [Chrome Web Store Program Policies](https://developer.chrome.
 | Narrow, easy-to-understand single purpose | Yes — local Pomodoro timer in toolbar popup |
 | No bundled unrelated features | Yes — no search, ads, content scripts, or analytics |
 | Minimum useful functionality | Yes — focus/break timers, pause/continue, notifications, daily count |
+| Design guidelines (less text, more visual) | Yes — see `DESIGN.md`; short UI copy; a11y labels kept |
 | No duplicate / template spam listing | Unique Pomodoro popup experience; one extension only |
 | Does not modify web pages | Yes — no content scripts or host permissions |
 

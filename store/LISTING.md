@@ -68,6 +68,14 @@ Provides a local Pomodoro timer (25-minute focus and 5-minute break) in the brow
 
 No host permissions are requested.
 
+## Design guidelines
+
+UI follows **Less text, more visual guidance**. See [DESIGN.md](../DESIGN.md) in this repository.
+
+- One main idea and one primary action per screen
+- Short titles, brief status text, specific button labels
+- Show with visuals first; keep accessibility labels
+
 ## Privacy practices answers
 
 | Question | Answer |
