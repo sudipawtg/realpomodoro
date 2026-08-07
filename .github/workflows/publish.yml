@@ -25,6 +25,8 @@ jobs:
     with:
       package_command: bash scripts/package-extension.sh
       artifact_glob: dist/*.zip
+      manifest_path: manifest.json
+      node_version: ''
       publish_mode: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_mode || 'publish' }}
     secrets:
       GCP_WIF_PROVIDER: ${{ secrets.GCP_WIF_PROVIDER }}
