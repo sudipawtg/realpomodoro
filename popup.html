@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=360, initial-scale=1.0" />
+    <title>realpomodoro</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app" data-testid="realpomodoro-app">
+      <header class="header">
+        <h1 class="wordmark" data-testid="wordmark">
+          real<span class="wordmark-accent">pomodoro</span>
+        </h1>
+        <p class="mode-label" data-testid="mode-label">Focus</p>
+      </header>
+
+      <section class="timer-section" aria-live="polite">
+        <div class="timer-ring" data-testid="timer-ring">
+          <svg class="timer-svg" viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="timer-track" cx="100" cy="100" r="88"></circle>
+            <circle class="timer-progress" cx="100" cy="100" r="88"></circle>
+          </svg>
+          <div class="timer-display" data-testid="timer-display">25:00</div>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-testid="primary-action"
+          id="primary-action"
+        >
+          Start
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-testid="reset-action"
+          id="reset-action"
+        >
+          Reset
+        </button>
+      </section>
+
+      <section class="mode-switch" data-testid="mode-switch-section">
+        <p class="mode-switch-label">Mode</p>
+        <div class="mode-switch-buttons">
+          <button
+            type="button"
+            class="mode-btn mode-btn-focus is-active"
+            data-testid="mode-focus"
+            id="mode-focus"
+          >
+            Focus
+          </button>
+          <button
+            type="button"
+            class="mode-btn mode-btn-break"
+            data-testid="mode-break"
+            id="mode-break"
+          >
+            Break
+          </button>
+        </div>
+      </section>
+
+      <footer class="daily-count">
+        <span class="daily-count-label">Today</span>
+        <span class="daily-count-value" data-testid="daily-count">0</span>
+        <span class="daily-count-suffix">focus sessions</span>
+      </footer>
+    </main>
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

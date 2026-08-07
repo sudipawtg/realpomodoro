@@ -1,0 +1,260 @@
+:root {
+  --bg: #faf8f6;
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --focus-accent: #e85d4c;
+  --focus-accent-soft: rgba(232, 93, 76, 0.14);
+  --focus-ring-track: rgba(232, 93, 76, 0.18);
+  --break-accent: #4caf7d;
+  --break-accent-soft: rgba(76, 175, 125, 0.14);
+  --break-ring-track: rgba(76, 175, 125, 0.18);
+  --card-border: rgba(28, 25, 23, 0.08);
+  --shadow: 0 12px 40px rgba(28, 25, 23, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  min-height: 480px;
+  font-family:
+    "SF Pro Text",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.mode-focus {
+  --accent: var(--focus-accent);
+  --accent-soft: var(--focus-accent-soft);
+  --ring-track: var(--focus-ring-track);
+}
+
+body.mode-break {
+  --accent: var(--break-accent);
+  --accent-soft: var(--break-accent-soft);
+  --ring-track: var(--break-ring-track);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 480px;
+  padding: 28px 24px 24px;
+  background:
+    radial-gradient(circle at top, var(--accent-soft), transparent 55%),
+    var(--bg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.wordmark {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.wordmark-accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.mode-label {
+  margin: 6px 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.timer-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 0 20px;
+}
+
+.timer-ring {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-track,
+.timer-progress {
+  fill: none;
+  stroke-width: 10;
+}
+
+.timer-track {
+  stroke: var(--ring-track);
+}
+
+.timer-progress {
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-dasharray: 552.92;
+  stroke-dashoffset: 552.92;
+  transition: stroke-dashoffset 0.35s ease;
+}
+
+.timer-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.btn {
+  border: none;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.03);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--card-border);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mode-switch {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.mode-switch.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.mode-switch-label {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mode-switch-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+}
+
+.mode-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-muted);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.mode-btn-focus.is-active {
+  background: var(--focus-accent-soft);
+  color: var(--focus-accent);
+}
+
+.mode-btn-break.is-active {
+  background: var(--break-accent-soft);
+  color: var(--break-accent);
+}
+
+.daily-count {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding-top: 4px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.daily-count-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.daily-count-suffix {
+  color: var(--text-muted);
+}
