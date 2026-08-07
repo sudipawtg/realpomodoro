@@ -82,3 +82,31 @@ See `store/` for listing copy, privacy policy, policy compliance notes, and a pu
 6. Completing break shows notification and switches to focus idle — neither auto-starts
 7. Close popup while running; reopen — remaining time is correct
 8. Reload extension while running — alarm is recreated; expired sessions complete once without duplicate notifications
+
+## Chrome Web Store publish
+
+This repository is an independent product. Releases are tagged as `vMAJOR.MINOR.PATCH` and must match `manifest.json` `version`.
+
+```bash
+# bump version in manifest.json, then:
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+Publishing uses the reusable workflow from [`sudipawtg/real-cws-workflows`](https://github.com/sudipawtg/real-cws-workflows).
+
+### Repository variables
+
+| Variable | Purpose |
+| --- | --- |
+| `CWS_PUBLISHER_ID` | Shared Chrome Web Store publisher ID |
+| `CWS_EXTENSION_ID` | This extension’s store item ID |
+
+### Secrets
+
+| Secret | Purpose |
+| --- | --- |
+| `GCP_WIF_PROVIDER` | Workload Identity Federation provider |
+| `CWS_SERVICE_ACCOUNT` | GCP service account email for CWS API |
+
+See [store/PUBLISH_CHECKLIST.md](./store/PUBLISH_CHECKLIST.md) and [store/PRIVACY_POLICY.md](./store/PRIVACY_POLICY.md).

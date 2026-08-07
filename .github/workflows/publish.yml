@@ -1,0 +1,31 @@
+name: Publish Chrome extension
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      publish_mode:
+        description: 'upload = draft only; publish = submit for review'
+        required: true
+        default: publish
+        type: choice
+        options:
+          - publish
+          - upload
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    uses: sudipawtg/real-cws-workflows/.github/workflows/publish-chrome-extension.yml@v1
+    with:
+      package_command: bash scripts/package-extension.sh
+      artifact_glob: dist/*.zip
+      publish_mode: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_mode || 'publish' }}
+    secrets:
+      GCP_WIF_PROVIDER: ${{ secrets.GCP_WIF_PROVIDER }}
+      CWS_SERVICE_ACCOUNT: ${{ secrets.CWS_SERVICE_ACCOUNT }}
